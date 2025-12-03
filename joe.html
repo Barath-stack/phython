@@ -1,0 +1,268 @@
+ <!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>.sneakers — eCart</title>
+  <style>
+    :root{
+      --bg:#0f0f0f;
+      --muted:#bdbdbd;
+      --accent:#57b776;
+      --card:#151515;
+      --glass: rgba(255,255,255,0.03);
+      --white: #fff;
+      --maxw:1200px;
+      --gap:18px;
+      --radius:14px;
+      font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--white);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }.container{
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:28px 20px;
+}
+
+/* header */
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+.logo{font-weight:700;font-size:26px;letter-spacing:1px}
+.nav{
+  display:flex;align-items:center;gap:26px;
+}
+.nav a{color:var(--muted);text-decoration:none;font-weight:600}
+
+.search{
+  position:relative;min-width:300px;
+}
+.search input{
+  width:100%;padding:12px 42px;border-radius:24px;background:var(--glass);border:1px solid rgba(255,255,255,0.05);color:var(--muted);
+}
+.search svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);opacity:0.7}
+
+.offer{color:var(--accent);border-bottom:2px solid rgba(87,183,118,0.25);padding-bottom:2px}
+
+/* hero */
+.hero{
+  margin-top:24px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:32px;padding:28px;border-radius:18px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  overflow:hidden;position:relative
+}
+.hero-left{position:relative;height:520px;background-image:url('https://images.unsplash.com/photo-1528701800484-60b0b0fb19b4?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=');background-size:cover;background-position:center;border-radius:12px}
+
+
+.shoe{
+  position:absolute;left:10%;bottom:0; width:520px;transform:rotate(-16deg) translateX(-8%);filter:drop-shadow(0 20px 30px rgba(0,0,0,0.7));
+}
+.price-badge{position:absolute;left:6%;top:18%;border:1px solid rgba(87,183,118,0.4);padding:8px 12px;border-radius:4px;font-size:34px;color:var(--accent);background:rgba(0,0,0,0.2);color: black;}
+
+.hero-right{padding:20px}
+.eyebrow{font-weight:700;color:var(--muted);letter-spacing:2px}
+h1{font-size:72px;margin:12px 0 18px;line-height:0.9}
+.cta{display:inline-block;padding:12px 20px;border-radius:6px;background:#0e0606;border:2px solid rgba(255,255,255,0.08);font-weight:800}
+
+/* product grid */
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+.card img{width:100%;height:210px;object-fit:cover;border-radius:8px}
+.card h3{margin:12px 0 6px}
+.card p{margin:0;color:var(--muted)}
+.card .price{margin-top:10px;font-weight:800}
+button{
+  display:inline-block;padding:12px 20px;border-radius:6px;background:#e8d4d4;border:2px solid rgba(255,255,255,0.08);font-weight:800;over
+}
+
+/* responsive */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;}
+  .hero-left{height:420px}
+  h1{font-size:44px}
+  .products{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:520px){
+  .search{min-width:140px}
+  .products{grid-template-columns:1fr}
+  .logo{font-size:20px}
+}
+
+/* small utils */
+.muted{color:var(--muted)}
+footer{padding:42px 0;color:var(--muted);text-align:center}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div style="display:flex;align-items:center;gap:18px">
+        <div class="logo">.sneakers</div>
+        <nav class="nav" aria-label="main navigation">
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+        </nav>
+      </div><div style="display:flex;align-items:center;gap:12px">
+    <div class="search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 21L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2"/></svg>
+      <input placeholder="Search..." aria-label="search">
+    </div>
+    <div class="offer">Limited Offer! </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-left">
+      <div class="big-circle"></div>
+      <!-- shoe image - use a transparent png or a good photo -->
+      <img class="shoe" src="collection-2.jpg" alt="shoe">
+      <div class="price-badge">$119</div>
+    </div>
+    <div class="hero-right">
+      <div class="eyebrow muted">AIR FORCE</div>
+      <h1>NEW<br/>SEASON</h1>
+      <p class="muted">Classic look. Modern comfort. Limited stock — grab yours before they're gone.</p>
+      <div style="margin-top:22px">
+        
+        <a href="http://127.0.0.1:5500/jb.html">
+          <button>BUY NOW!</button></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="products" aria-label="products">
+    <article class="card">
+      <img src="collection-3.jpg" alt="shoe1">
+      <h3>Air Force Black</h3>
+      <p class="muted">Men · Classic</p>
+      <div class="price">$119</div>
+      <a href="http://127.0.0.1:5500/jb.html">
+          <button>BUY NOW!</button></a>
+    </article>
+
+    <article class="card">
+      <img src="WhatsApp Image 2025-10-19 at 12.38.47_95c3cbe1.jpg" alt="shoe2">
+      <h3>Jordan Retro</h3>
+      <p class="muted">Limited Edition</p>
+      <div class="price">$149</div>
+      <a href="http://127.0.0.1:5500/jb.html">
+          <button>BUY NOW!</button></a>
+    </article>
+
+    <article class="card">
+      <img src="collection-1.jpg" alt="shoe3">
+      <h3>Blazer Mid</h3>
+      <p class="muted">casual · Comfort</p>
+      <div class="price">$109</div>
+      <a href="http://127.0.0.1:5500/jb.html">
+          <button>BUY NOW!</button></a>
+    </article>
+
+    <article class="card">
+      <img src="change the backgroun.png" alt="shoe3">
+      <h3>Adidas</h3>
+      <p class="muted">king · maker</p>
+      <div class="price">$119</div>
+      <a href="http://127.0.0.1:5500/jb.html">
+          <button>BUY NOW!</button></a>
+    </article>
+
+    <article class="card">
+      <img src="WhatsApp Image 2025-10-19 at 19.53.08_10b83aec.jpg" alt="shoe3">
+      <h3>Relaxo</h3>
+      <p class="muted">Retro · Comfortable</p>
+      <div class="price">$199</div>
+      <a href="http://127.0.0.1:5500/jb.html">
+          <button>BUY NOW!</button></a>
+    </article>
+
+    <article class="card">
+      <img src="WhatsApp Image 2025-10-19 at 12.34.17_a63fe125.jpg" alt="shoe3">
+      <h3> Reebok</h3>
+      <p class="muted">Tommy Hilfiger </p>
+      <div class="price">$100</div>
+      <a href="http://127.0.0.1:5500/jb.html">
+          <button>BUY NOW!</button></a>
+          
+      
+      
+    </article>
+  </section>
+
+<hr>
+      
+ 
+ 
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="two.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="social-icons">
+      <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.youtube.com/"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <div class="footer-content">
+      <div class="footer-section about">
+        
+      </div>
+
+      <div class="footer-section links">
+        <h3>.  About Us</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      
+          </div>
+        </form>
+      </div>
+    </div>
+  </footer>
+</main> 
+
+<footer>
+       
+  © <span id="year"></span> .sneakers • 
+</footer>
+
+      
+  </div>  <script>
+    // small interactive bits
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // quick demo: clicking BUY NOW scrolls to products
+    document.querySelectorAll('.cta').forEach(el=>{
+      el.addEventListener('click', e=>{
+        e.preventDefault();
+        document.querySelector('.products').scrollIntoView({behavior:'smooth'});
+      })
+    })
+  </script></body>
+</html>
